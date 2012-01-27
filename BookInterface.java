@@ -63,13 +63,10 @@ public class BookInterface {
 						
 							System.out.print("Author: ");
 							String author = keyboard.nextLine();
+							
+							long ISBN = promptForISBN();
 						
-							System.out.print("ISBN: ");
-							long ISBN = keyboard.nextLong();
-						
-							System.out.print("Price: ");
-							double price = keyboard.nextDouble();
-							keyboard.nextLine();
+							double price = promptForPrice();	
 						
 							Book new_book = new Book(title, author, ISBN, price);
 						
@@ -119,6 +116,38 @@ public class BookInterface {
 					break;
 			}
 		}
+	}
+	
+	private static long promptForISBN() {
+	
+		long ISBN;
+	
+		do {
+			System.out.print("ISBN: ");
+			ISBN = keyboard.nextLong();
+			
+			if (ISBN < 1000000000000L
+				|| ISBN > 9999999999999L) System.out.println("Invalid ISBN: ISBN must be a positive "
+											+ "13 digit integer.");
+		} while (ISBN < 1000000000000L
+				|| ISBN > 9999999999999L); //ISBN numbers are 13 digits long.
+				
+		return ISBN;
+	}
+	
+	private static double promptForPrice() {
+	
+		double price;
+	
+		do {
+			System.out.print("Price: ");
+			price = keyboard.nextDouble();
+			keyboard.nextLine();
+			
+			if (price < 0) System.out.println("Invalid Price: Price must be a positive number.");
+		} while (price < 0);
+		
+		return price;
 	}
 	
 	private static boolean promptPassword() {
@@ -188,16 +217,14 @@ public class BookInterface {
 				break;
 			case 3:
 				System.out.print("Enter a new ISBN: ");
-				long ISBN = keyboard.nextLong();
-				keyboard.nextLine();
+				long ISBN = promptForISBN();
 				inventory[index].setISBN(ISBN);
 				
 				promptUpdateIndividualBook(index);
 				break;
 			case 4:
 				System.out.print("Enter a new Price: ");
-				double price = keyboard.nextDouble();
-				keyboard.nextLine();
+				double price = promptForPrice();
 				inventory[index].setPrice(price);
 				
 				promptUpdateIndividualBook(index);
