@@ -7,6 +7,8 @@
 //
 // -----------------------------------------------------
 
+import java.text.DecimalFormat;
+
 public class Book {
 	
 	private String title;
@@ -67,10 +69,13 @@ public class Book {
 
 	@Override
 	public String toString() {
+		
+		DecimalFormat formatter = new DecimalFormat("#.##");
+		
 		return "Author: " + author
 				+ "\nTitle: " + title
 				+ "\nISBN: " + ISBN
-				+ "\nPrice: " + price;
+				+ "\nPrice: $" + formatter.format(price);
 	}
 
 	@Override
