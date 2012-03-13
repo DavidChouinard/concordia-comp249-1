@@ -23,9 +23,7 @@ About
 
 We don’t think learning stops when an assignment is submitted. This is meant as an intellectual effort to find the “perfect” solution to assignments. We're students who love writing beautiful code and the intellectual challenge of refactoring.
 
-Assignment solutions are only pushed to Github after their submission deadline.
-
-Pull requests always accepted, even for trivial improvements.
+Assignment solutions are only pushed to Github after their submission deadline. Pull requests always accepted.
 
 If it wasn't obvious, this is not an official effort from any university.
 
