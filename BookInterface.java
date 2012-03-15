@@ -1,13 +1,5 @@
-// -----------------------------------------------------
-// Assignment 1
-// Question: Part 2
-// Written by: David Chouinard, 1695452
-//
-// This program enables a user to manage an inventory of books
-//
-// -----------------------------------------------------
-
 import java.util.Scanner;
+
 public class BookInterface {
 	// Change to desired password
 	private static final String password = "password";
@@ -17,7 +9,7 @@ public class BookInterface {
 	public static Scanner keyboard=new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		String prompt = "Welcome to your bookstore manager, written by David Chouinard (1695452)\n"
+		String prompt = "Welcome to your bookstore manager\n"
 					+ "Enter the maximum number of books you want your store to contain > ";
 		System.out.print(prompt);
 		

@@ -1,12 +1,3 @@
-// -----------------------------------------------------
-// Assignment 1
-// Question: Part 1
-// Written by: David Chouinard, 1695452
-//
-// This program enables a user to manage an inventory of books
-//
-// -----------------------------------------------------
-
 import java.text.DecimalFormat;
 
 public class Book {
